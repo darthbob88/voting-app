@@ -1,46 +1,17 @@
-# Getting Started with Create React App
+# ElectionLibrary
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This will be an app/library implementing various election methods in React/Typescript, comparable to <https://civs1.civs.us/> or <https://www.condorcet.vote/>, except made by me. Will support at least first-past-the-post and instant runoff voting, and hopefully plugin extensibility for other methods. Must also note the downsides of various methods from [Building A Better Ballot](https://ncase.me/ballot/) and  [Simulating alternate voting systems](https://www.youtube.com/watch?v=yhO6jfHPFQU).
 
-## Available Scripts
+## Built Using
 
-In the project directory, you can run:
+* [React](https://reactjs.org/)
+* [create-react-app](https://facebook.github.io/create-react-app/docs/getting-started)
+* [Typescript](https://www.typescriptlang.org/)
+* [Firebase](https://firebase.google.com/)
+  
+## Development Roadmap (Subject to Change)
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+v0.1 Create my own poll(s) and ballots using FPTP voting
+v0.2 Add capacity to create poll using IRV voting, and thus the ability to use different voting methods.
+v0.6 Add capacity and UX for user to create polls, including selecting method and image/text for options.
+v1.0 Extract functionality to library, sufficient for user to create their own poll on their own site/service.
