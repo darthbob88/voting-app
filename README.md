@@ -48,4 +48,4 @@ This will be an app/library implementing various election methods in React/Types
 
   * New and unfamiliar.
   * Liable to pick candidate without majority support. If the votes are split 30-30-40, with no second choices, nobody gets a majority.
-  * Still vulnerable to spoilers, if a 3rd candidate is able to take votes from the likely winner. Given a situation where 29 ballots rank the candidates A-B-C, 31 rank them C-A-B, and 40 rank them B-A-C, candidate A will be dropped and their votes applied to B, giving B a victory 69-31. However, if C did not run, then A would win 60-40.
+  * Still vulnerable to spoilers, if a 3rd candidate is able to take votes from the likely winner. Suppose there are three candidates A/B/C, where C is aligned with A and opposed to B. If 29 ballots rank the candidates A-B-C, 31 rank them C-A-B, and 40 rank them B-A-C, candidate A will be dropped and their votes applied to B, giving B a victory 69-31. However, if C did not run, then A would win 60-40. Likewise, if some of the C supporters decided to vote A-C-B, then C would be dropped in the first round and A would win.
