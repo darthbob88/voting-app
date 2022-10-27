@@ -2,7 +2,7 @@ import { Ballot, Poll } from "./Poll";
 
 /*
  * Using local storage, just so I don't have to set up
- * Firebase until I'm more confident in the data structures. 
+ * Firebase until I'm more confident in the data structures and behaviors. 
  */
 //TODO: Set up Firebase, or whatever other data storage I decide to use.
 
