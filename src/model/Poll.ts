@@ -28,4 +28,10 @@ export type Ballot = {
     votes: any,
 }
 
-export const testBallot: Ballot = { timestamp: Date.now(), ballotID: "ballotID", voterID: "voterID", pollID: "pollID", votes: [1, 2, 3, 4] }
+export const testBallot: Ballot = {
+    timestamp: Date.now(),
+    ballotID: "ballotID",
+    voterID: "voterID",
+    pollID: "pollID",
+    votes: [1, 2, 3, 4]
+}
