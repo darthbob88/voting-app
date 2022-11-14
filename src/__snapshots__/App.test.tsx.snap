@@ -13,21 +13,50 @@ exports[`renders learn react link 1`] = `
         class="App-logo"
         src="logo.svg"
       />
-      <p>
-        Edit 
-        <code>
-          src/App.tsx
-        </code>
-         and save to reload.
-      </p>
-      <a
-        class="App-link"
-        href="https://reactjs.org"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Learn React
-      </a>
+      <form>
+        <h3>
+          New Poll Form
+        </h3>
+        <label>
+          <input
+            type="text"
+            value="pollName"
+          />
+           Please enter a name for your poll
+        </label>
+        <label
+          class="label"
+        >
+          <input
+            type="text"
+            value="apple,orange,banana"
+          />
+           Please enter a comma-separated list of candidates for your poll
+        </label>
+        <label>
+          <select>
+            <option
+              value="FPTP"
+            >
+              First past the post
+            </option>
+            <option
+              value="IRV"
+            >
+              Instant runoff vote
+            </option>
+             
+          </select>
+           Please enter a name for your poll
+        </label>
+        <div>
+          Current value of newPoll: 
+          {"ID":"pollID","name":"pollName","creator":"pollCreator","creation":1668475920768,"expiration":1668475920768,"method":"FPTP","candidates":["apple","orange","banana"],"ballots":[]}
+        </div>
+        <button>
+          Create poll
+        </button>
+      </form>
     </header>
   </div>
 </div>
