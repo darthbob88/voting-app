@@ -16,6 +16,7 @@ function NewPoll() {
 
     const [newPoll, setNewPoll] = useState<Poll>(testPoll);
 
+    // TODO: This should be derived from the set of plugins available.
     const methodOptions = [{ value: "FPTP", name: "First past the post" }, { value: "IRV", name: "Instant runoff vote" }]
 
     const createNewPoll = () => {
