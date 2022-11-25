@@ -8,11 +8,12 @@ exports[`renders learn react link 1`] = `
     <header
       class="App-header"
     >
-      <img
-        alt="logo"
-        class="App-logo"
-        src="logo.svg"
-      />
+      <div>
+        <h2>
+          List of Polls
+        </h2>
+        <ul />
+      </div>
       <form>
         <h3>
           New Poll Form
@@ -49,10 +50,6 @@ exports[`renders learn react link 1`] = `
           </select>
            Please enter a name for your poll
         </label>
-        <div>
-          Current value of newPoll: 
-          {"ID":"pollID","name":"pollName","creator":"pollCreator","creation":1668475920768,"expiration":1668475920768,"method":"FPTP","candidates":["apple","orange","banana"],"ballots":[]}
-        </div>
         <button>
           Create poll
         </button>

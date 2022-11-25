@@ -38,10 +38,6 @@ exports[`renders New Poll component 1`] = `
       </select>
        Please enter a name for your poll
     </label>
-    <div>
-      Current value of newPoll: 
-      {"ID":"pollID","name":"pollName","creator":"pollCreator","creation":1668640163166,"expiration":1668640163166,"method":"FPTP","candidates":["apple","orange","banana"],"ballots":[]}
-    </div>
     <button>
       Create poll
     </button>

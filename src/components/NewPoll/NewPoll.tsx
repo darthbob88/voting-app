@@ -62,8 +62,6 @@ function NewPoll() {
                     methodOptions.map(method => <option value={method.value}>{method.name}</option>)
                 } </select> Please enter a name for your poll</label>
 
-            <div>Current value of newPoll: {JSON.stringify(newPoll)}</div>
-
             <button onClick={() => createNewPoll()}>Create poll</button>
         </form>
     );
