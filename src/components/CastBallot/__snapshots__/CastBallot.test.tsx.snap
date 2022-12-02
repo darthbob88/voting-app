@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders New Poll component 1`] = `
+<div>
+  <form>
+    <h3>
+      Ballot for 
+      pollName
+    </h3>
+    <div
+      class="ballot"
+    >
+      <label>
+         
+        <input
+          name="ballot"
+          type="radio"
+          value="apple"
+        />
+        apple
+      </label>
+      <label>
+         
+        <input
+          name="ballot"
+          type="radio"
+          value="orange"
+        />
+        orange
+      </label>
+      <label>
+         
+        <input
+          name="ballot"
+          type="radio"
+          value="banana"
+        />
+        banana
+      </label>
+    </div>
+    <div>
+      Current value of ballot: 
+    </div>
+    <button>
+      Cast Ballot
+    </button>
+  </form>
+</div>
+`;
