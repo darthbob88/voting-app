@@ -41,6 +41,12 @@ exports[`renders New Poll component 1`] = `
     <div>
       Current value of ballot: 
     </div>
+    <div>
+      Poll method is 
+      FPTP
+      , options are 
+      ["apple","orange","banana"]
+    </div>
     <button>
       Cast Ballot
     </button>

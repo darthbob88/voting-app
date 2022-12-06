@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders learn react link 1`] = `
+exports[`renders home page stuff 1`] = `
 <div>
   <div
     class="App"
@@ -12,7 +12,19 @@ exports[`renders learn react link 1`] = `
         <h2>
           List of Polls
         </h2>
-        <ul />
+        <h4>
+          Does not currently work
+        </h4>
+        <ul>
+          <li>
+            <a
+              href="best-fruit"
+            >
+              best-fruit
+            </a>
+             
+          </li>
+        </ul>
       </div>
       <form>
         <h3>
@@ -48,10 +60,59 @@ exports[`renders learn react link 1`] = `
             </option>
              
           </select>
-           Please enter a name for your poll
+           Please select a method for your poll
         </label>
         <button>
           Create poll
+        </button>
+      </form>
+      <form>
+        <h3>
+          Ballot for 
+          pollName
+        </h3>
+        <div
+          class="ballot"
+        >
+          <label>
+             
+            <input
+              name="ballot"
+              type="radio"
+              value="apple"
+            />
+            apple
+          </label>
+          <label>
+             
+            <input
+              name="ballot"
+              type="radio"
+              value="orange"
+            />
+            orange
+          </label>
+          <label>
+             
+            <input
+              name="ballot"
+              type="radio"
+              value="banana"
+            />
+            banana
+          </label>
+        </div>
+        <div>
+          Current value of ballot: 
+        </div>
+        <div>
+          Poll method is 
+          FPTP
+          , options are 
+          ["apple","orange","banana"]
+        </div>
+        <button>
+          Cast Ballot
         </button>
       </form>
     </header>

@@ -6,6 +6,9 @@ exports[`renders PollListing component 1`] = `
     <h2>
       List of Polls
     </h2>
+    <h4>
+      Does not currently work
+    </h4>
     <ul />
   </div>
 </div>
