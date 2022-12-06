@@ -26,6 +26,8 @@ function NewPoll() {
         // TODO: Get some better way to do this. Probably integrate with Firebase, to set it as part of the data access createPoll function?
 
         let creation = new Date().getTime();
+
+        // TODO: Use a date-picker, as noted in the JSX.
         var result = new Date();
         result.setDate(result.getDate() + 1);
 
@@ -60,7 +62,7 @@ function NewPoll() {
             <label><select value={newPoll.method} onChange={(evt) => setNewPoll({ ...newPoll, method: evt.target.value })}>
                 {
                     methodOptions.map(method => <option value={method.value}>{method.name}</option>)
-                } </select> Please enter a name for your poll</label>
+                } </select> Please select a method for your poll</label>
 
             <button onClick={() => createNewPoll()}>Create poll</button>
         </form>
