@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { castBallot, retrievePoll } from '../../model/DataAccess';
 import { Ballot } from '../../model/Poll';
 
@@ -37,21 +37,22 @@ function CastBallot({ pollID }: BallotProps) {
         }
     }
 
-    const submitBallot = () => {
+    const submitBallot = (event: FormEvent) => {
+        event.preventDefault()
         // TODO: Fix this to properly create a ballotID, voterID, etc.
         let newBallot: Ballot = { ballotID: "butts", voterID: "butts", votes: selectedOption, timestamp: Date.now(), pollID: pollID };
         castBallot(newBallot, pollID);
     }
 
     return (
-        <form><h3>Ballot for {poll.name}</h3>
+        <form onSubmit={(event) => submitBallot(event)}><h3>Ballot for {poll.name}</h3>
             {renderBallot(poll.candidates, poll.method)}
 
             <div>Current value of ballot: {JSON.stringify(selectedOption)}</div>
             <div>Poll method is {poll.method}, options are {JSON.stringify(poll.candidates)}</div>
 
             {/* TODO: Disable the button until the ballot is valid. */}
-            <button onClick={() => submitBallot()}>Cast Ballot</button>
+            <button onClick={(event) => submitBallot(event)}>Cast Ballot</button>
         </form>
     );
 }

@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
 import { retrievePollList } from '../../model/DataAccess';
-import { Poll, testPoll } from '../../model/Poll';
 
-import styles from "./PollListing.module.css";
 
 function PollListing() {
     const pollList = retrievePollList();
