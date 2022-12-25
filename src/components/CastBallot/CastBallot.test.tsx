@@ -10,7 +10,20 @@ beforeEach(() => {
 
 })
 
-test('renders New Poll component', () => {
+test('renders Ballot component', () => {
     const { getByText, container } = render(<CastBallot pollID={testPoll.ID} />);
     expect(container).toMatchSnapshot();
 });
+
+xtest('user can cast ballot with proper result', () => {
+    const { getByText, container } = render(<CastBallot pollID={testPoll.ID} />);
+    expect(container).toMatchSnapshot();
+});
+
+xtest('user cannot submit empty ballot', () => {
+    const { getByText, container } = render(<CastBallot pollID={testPoll.ID} />);
+    expect(container).toMatchSnapshot();
+});
+
+
+

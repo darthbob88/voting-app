@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders New Poll component 1`] = `
+exports[`renders Ballot component 1`] = `
 <div>
   <form>
     <h3>
