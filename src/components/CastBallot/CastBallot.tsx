@@ -37,6 +37,7 @@ function CastBallot({ pollID }: BallotProps) {
         }
     }
 
+    // TODO: This should redirect the user back to the home/poll page, and give some indication that we've cast a ballot.
     const submitBallot = (event: FormEvent) => {
         event.preventDefault()
         // TODO: Fix this to properly create a ballotID, voterID, etc.
