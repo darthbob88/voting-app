@@ -47,13 +47,17 @@ exports[`renders home page stuff 1`] = `
            Please enter a comma-separated list of candidates for your poll
         </label>
         <label>
-          <select>
+          <select
+            data-testid="methodSelect"
+          >
             <option
+              data-testid="methodOption"
               value="FPTP"
             >
               First past the post
             </option>
             <option
+              data-testid="methodOption"
               value="IRV"
             >
               Instant runoff vote
