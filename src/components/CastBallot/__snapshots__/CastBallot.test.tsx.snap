@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Ballot component 1`] = `
+<div>
+  <form>
+    <h3>
+      Ballot for 
+      pollName
+    </h3>
+    <div
+      class="ballot"
+    >
+      <label>
+         
+        <input
+          name="ballot"
+          type="radio"
+          value="apple"
+        />
+        apple
+      </label>
+      <label>
+         
+        <input
+          name="ballot"
+          type="radio"
+          value="orange"
+        />
+        orange
+      </label>
+      <label>
+         
+        <input
+          name="ballot"
+          type="radio"
+          value="banana"
+        />
+        banana
+      </label>
+    </div>
+    <div>
+      Current value of ballot: 
+    </div>
+    <div>
+      Poll method is 
+      FPTP
+      , options are 
+      ["apple","orange","banana"]
+    </div>
+    <button>
+      Cast Ballot
+    </button>
+  </form>
+</div>
+`;

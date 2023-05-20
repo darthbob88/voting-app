@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders PollListing component 1`] = `
+<div>
+  <div>
+    <h2>
+      List of Polls
+    </h2>
+    <h4>
+      Does not currently work
+    </h4>
+    <ul />
+  </div>
+</div>
+`;

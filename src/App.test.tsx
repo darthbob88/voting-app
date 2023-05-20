@@ -1,9 +1,10 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
+import { createPoll } from './model/DataAccess';
+import { testPoll } from './model/Poll';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders home page stuff', () => {
+  createPoll({ ...testPoll, ID: "best-fruit" });
+  const { getByText, container } = render(<App />);
+  expect(container).toMatchSnapshot();
 });

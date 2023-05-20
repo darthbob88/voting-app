@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders home page stuff 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      <div>
+        <h2>
+          List of Polls
+        </h2>
+        <h4>
+          Does not currently work
+        </h4>
+        <ul>
+          <li>
+            <a
+              href="best-fruit"
+            >
+              best-fruit
+            </a>
+             
+          </li>
+        </ul>
+      </div>
+      <form>
+        <h3>
+          New Poll Form
+        </h3>
+        <label>
+          <input
+            type="text"
+            value="pollName"
+          />
+           Please enter a name for your poll
+        </label>
+        <label
+          class="label"
+        >
+          <input
+            type="text"
+            value="apple,orange,banana"
+          />
+           Please enter a comma-separated list of candidates for your poll
+        </label>
+        <label>
+          <select
+            data-testid="methodSelect"
+          >
+            <option
+              data-testid="methodOption"
+              value="FPTP"
+            >
+              First past the post
+            </option>
+            <option
+              data-testid="methodOption"
+              value="IRV"
+            >
+              Instant runoff vote
+            </option>
+             
+          </select>
+           Please select a method for your poll
+        </label>
+        <button>
+          Create poll
+        </button>
+      </form>
+      <form>
+        <h3>
+          Ballot for 
+          pollName
+        </h3>
+        <div
+          class="ballot"
+        >
+          <label>
+             
+            <input
+              name="ballot"
+              type="radio"
+              value="apple"
+            />
+            apple
+          </label>
+          <label>
+             
+            <input
+              name="ballot"
+              type="radio"
+              value="orange"
+            />
+            orange
+          </label>
+          <label>
+             
+            <input
+              name="ballot"
+              type="radio"
+              value="banana"
+            />
+            banana
+          </label>
+          <label>
+             
+            <input
+              name="ballot"
+              type="radio"
+              value="mango"
+            />
+            mango
+          </label>
+        </div>
+        <div>
+          Current value of ballot: 
+        </div>
+        <div>
+          Poll method is 
+          FPTP
+          , options are 
+          ["apple","orange","banana","mango"]
+        </div>
+        <button>
+          Cast Ballot
+        </button>
+      </form>
+      <div>
+        <h3>
+          Results for 
+          pollName
+        </h3>
+        <div
+          class="ballot"
+        >
+          Winner is 
+          mango
+           with 
+          3
+           votes out of 
+          6
+          <br />
+          Detailed result:
+          <ol>
+            <li>
+              mango
+               - 
+              3
+               votes
+            </li>
+            <li>
+              orange
+               - 
+              2
+               votes
+            </li>
+            <li>
+              apple
+               - 
+              1
+               votes
+            </li>
+            <li>
+              banana
+               - 
+              0
+               votes
+            </li>
+          </ol>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+`;

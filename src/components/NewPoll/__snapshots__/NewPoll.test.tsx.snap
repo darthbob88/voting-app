@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders New Poll component 1`] = `
+<div>
+  <form>
+    <h3>
+      New Poll Form
+    </h3>
+    <label>
+      <input
+        type="text"
+        value="pollName"
+      />
+       Please enter a name for your poll
+    </label>
+    <label
+      class="label"
+    >
+      <input
+        type="text"
+        value="apple,orange,banana"
+      />
+       Please enter a comma-separated list of candidates for your poll
+    </label>
+    <label>
+      <select
+        data-testid="methodSelect"
+      >
+        <option
+          data-testid="methodOption"
+          value="FPTP"
+        >
+          First past the post
+        </option>
+        <option
+          data-testid="methodOption"
+          value="IRV"
+        >
+          Instant runoff vote
+        </option>
+         
+      </select>
+       Please select a method for your poll
+    </label>
+    <button>
+      Create poll
+    </button>
+  </form>
+</div>
+`;
