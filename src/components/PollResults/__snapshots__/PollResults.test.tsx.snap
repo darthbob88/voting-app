@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders PollResults component 1`] = `
+<div>
+  <div>
+    <h3>
+      Results for 
+      pollName
+    </h3>
+    <div
+      class="ballot"
+    >
+      Winner is 
+      apple
+       with 
+      0
+       votes out of 
+      0
+      <br />
+      Detailed result:
+      <ol>
+        <li>
+          apple
+           - 
+          0
+           votes
+        </li>
+        <li>
+          orange
+           - 
+          0
+           votes
+        </li>
+        <li>
+          banana
+           - 
+          0
+           votes
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+`;

@@ -105,6 +105,15 @@ exports[`renders home page stuff 1`] = `
             />
             banana
           </label>
+          <label>
+             
+            <input
+              name="ballot"
+              type="radio"
+              value="mango"
+            />
+            mango
+          </label>
         </div>
         <div>
           Current value of ballot: 
@@ -113,12 +122,56 @@ exports[`renders home page stuff 1`] = `
           Poll method is 
           FPTP
           , options are 
-          ["apple","orange","banana"]
+          ["apple","orange","banana","mango"]
         </div>
         <button>
           Cast Ballot
         </button>
       </form>
+      <div>
+        <h3>
+          Results for 
+          pollName
+        </h3>
+        <div
+          class="ballot"
+        >
+          Winner is 
+          mango
+           with 
+          3
+           votes out of 
+          6
+          <br />
+          Detailed result:
+          <ol>
+            <li>
+              mango
+               - 
+              3
+               votes
+            </li>
+            <li>
+              orange
+               - 
+              2
+               votes
+            </li>
+            <li>
+              apple
+               - 
+              1
+               votes
+            </li>
+            <li>
+              banana
+               - 
+              0
+               votes
+            </li>
+          </ol>
+        </div>
+      </div>
     </header>
   </div>
 </div>

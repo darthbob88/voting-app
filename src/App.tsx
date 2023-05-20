@@ -3,6 +3,7 @@ import './App.css';
 import CastBallot from './components/CastBallot/CastBallot';
 import NewPoll from './components/NewPoll/NewPoll';
 import PollListing from './components/PollListing/PollListing';
+import PollResults from './components/PollResults/PollResults';
 
 function App() {
   localStorage.setItem("best-fruit", JSON.stringify({
@@ -15,7 +16,8 @@ function App() {
     "candidates": [
       "apple",
       "orange",
-      "banana"
+      "banana",
+      "mango"
     ],
     "ballots": [
       {
@@ -69,6 +71,7 @@ function App() {
         <PollListing />
         <NewPoll />
         <CastBallot pollID='best-fruit' />
+        <PollResults pollID='best-fruit' />
       </header>
     </div>
   );
