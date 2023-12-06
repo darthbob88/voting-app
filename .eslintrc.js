@@ -1,27 +1,27 @@
 "use strict";
 
 const namingConventionsRules = [
-    {
-        'selector': 'variable',
-        'format': [ 'camelCase', 'UPPER_CASE' ]
-    },
-    {
-        'selector': 'parameter',
-        'format': [ 'camelCase' ],
-        'leadingUnderscore': 'allow'
-    },
-    {
-        'selector': 'typeLike',
-        'format': [ 'PascalCase' ]
-    },
-    {
-        'selector': 'interface',
-        'prefix': [ 'I' ],
-        'format': [ 'PascalCase' ]
-    }
+  {
+    'selector': 'variable',
+    'format': ['camelCase', 'UPPER_CASE']
+  },
+  {
+    'selector': 'parameter',
+    'format': ['camelCase'],
+    'leadingUnderscore': 'allow'
+  },
+  {
+    'selector': 'typeLike',
+    'format': ['PascalCase']
+  },
+  {
+    'selector': 'interface',
+    'prefix': ['I'],
+    'format': ['PascalCase']
+  }
 ];
 
-const restrictedImportPatterns = [ '@spectre-*/*/*', 'libs/*', 'apps/spectre-app/*', 'office-ui-fabric-react' ];
+const restrictedImportPatterns = ['@spectre-*/*/*', 'libs/*', 'apps/spectre-app/*', 'office-ui-fabric-react'];
 
 module.exports = {
   'env': {
@@ -43,9 +43,9 @@ module.exports = {
     },
     'ecmaVersion': 'latest',
     'sourceType': 'module',
-    'project': [ 'tsconfig.json' ],
+    'project': ['tsconfig.json'],
   },
-  ignorePatterns: [ '.eslintrc.js' ],
+  ignorePatterns: ['.eslintrc.js', '*.svg', '*.css'],
   'plugins': [
     'react',
     '@typescript-eslint',
@@ -63,33 +63,33 @@ module.exports = {
     'require-jsdoc': 'off',
     'arrow-parens': 'off',
     'arrow-spacing': ['warn', { 'before': true, 'after': true }],
-    'object-curly-spacing': [ 'error', 'always' ],
-    'array-bracket-spacing': [ 'warn', 'always' ],
-    'comma-dangle': [ 'error', {
+    'object-curly-spacing': ['error', 'always'],
+    'array-bracket-spacing': ['warn', 'always'],
+    'comma-dangle': ['error', {
       'arrays': 'always-multiline',
       'objects': 'always-multiline',
       'imports': 'always-multiline',
       'exports': 'always-multiline',
       'functions': 'never',
-    } ],
+    }],
     'no-unused-vars': 'off',
-    'eqeqeq': [ 'error', 'always' ],
+    'eqeqeq': ['error', 'always'],
     'react/display-name': 'off',
     'no-invalid-this': 'off',
     'valid-jsdoc': 'off',
     'new-cap': 'warn',
     'react/no-unescaped-entities': 'warn',
     'camelcase': 'warn',
-    'indent': [ 'warn', 2, {
+    'indent': ['warn', 2, {
       "SwitchCase": 1,
       "ignoredNodes": ['JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXFragment', 'JSXOpeningFragment', 'JSXClosingFragment', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild'],
-    } ],
+    }],
     'eol-last': 'off',
-    'no-multiple-empty-lines': [ 'error', {
-        'max': 1,
-        'maxEOF': 0,
-        'maxBOF': 0
-    } ],
+    'no-multiple-empty-lines': ['error', {
+      'max': 1,
+      'maxEOF': 0,
+      'maxBOF': 0
+    }],
     'jsx-quotes': 'warn',
     'dot-notation': 'warn',
     'no-useless-computed-key': 'warn',
@@ -97,13 +97,13 @@ module.exports = {
     'no-param-reassign': 'error',
     'no-await-in-loop': 'error',
     'no-unneeded-ternary': 'error',
-    'array-element-newline': [ 'error',
+    'array-element-newline': ['error',
       {
         'ArrayExpression': { 'multiline': true, 'minItems': 1 },
         'ArrayPattern': { 'multiline': true, 'minItems': 5 }
       }
     ],
-    'array-bracket-newline': [ 'error', { 'multiline': true } ],
+    'array-bracket-newline': ['error', { 'multiline': true }],
     'react/jsx-key': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react/no-access-state-in-setstate': 'error',
@@ -117,31 +117,31 @@ module.exports = {
     'react/jsx-props-no-multi-spaces': 'warn',
     'react/jsx-tag-spacing': 'warn',
     'react/jsx-wrap-multilines': ['warn', {
-        "declaration": "parens-new-line",
-        "assignment": "parens-new-line",
-        "return": "parens-new-line",
-        "arrow": "parens-new-line",
-        "condition": "parens-new-line",
-        "logical": "parens-new-line",
-        "prop": "parens-new-line"
-      }
+      "declaration": "parens-new-line",
+      "assignment": "parens-new-line",
+      "return": "parens-new-line",
+      "arrow": "parens-new-line",
+      "condition": "parens-new-line",
+      "logical": "parens-new-line",
+      "prop": "parens-new-line"
+    }
     ],
-    'react/self-closing-comp': [ 'error' ],
-    'react/jsx-fragments': [ 'error', 'syntax' ],
+    'react/self-closing-comp': ['error'],
+    'react/jsx-fragments': ['error', 'syntax'],
     'react/jsx-no-leaked-render': 'error',
-    'react/jsx-max-props-per-line': [ 'error', { "maximum": { "single": 2, "multi": 1 } } ],
-    'react/jsx-indent-props': [ 'error', 2 ],
-    "no-restricted-imports": [ 'error', { "patterns": restrictedImportPatterns } ],
+    'react/jsx-max-props-per-line': ['error', { "maximum": { "single": 2, "multi": 1 } }],
+    'react/jsx-indent-props': ['error', 2],
+    "no-restricted-imports": ['error', { "patterns": restrictedImportPatterns }],
     'react-hooks/exhaustive-deps': 'warn',
     'no-duplicate-imports': 'warn',
     'prefer-arrow-callback': 'warn',
     'no-console': 'warn',
-    'space-in-parens': [ 'warn', 'never' ],
-    'padding-line-between-statements': [ 'error',
-        { 'blankLine': 'always', 'prev': [ 'multiline-const', 'multiline-expression', 'block', 'block-like' ], 'next': '*' },
-        { 'blankLine': 'always', 'prev': '*', 'next': [ 'multiline-const', 'multiline-expression', 'block', 'block-like' ] },
-        { 'blankLine': 'always', 'prev': 'import', 'next': [ 'const', 'let', 'function', 'export', 'block', 'block-like' ] },
-        { 'blankLine': 'any', 'prev': [ 'singleline-const', 'singleline-let' ], 'next': 'if' }
+    'space-in-parens': ['warn', 'never'],
+    'padding-line-between-statements': ['error',
+      { 'blankLine': 'always', 'prev': ['multiline-const', 'multiline-expression', 'block', 'block-like'], 'next': '*' },
+      { 'blankLine': 'always', 'prev': '*', 'next': ['multiline-const', 'multiline-expression', 'block', 'block-like'] },
+      { 'blankLine': 'always', 'prev': 'import', 'next': ['const', 'let', 'function', 'export', 'block', 'block-like'] },
+      { 'blankLine': 'any', 'prev': ['singleline-const', 'singleline-let'], 'next': 'if' }
     ],
     'import/order': 'error',
     'import/no-named-as-default': 'off',
@@ -149,17 +149,17 @@ module.exports = {
     '@typescript-eslint/prefer-for-of': 'warn',
     '@typescript-eslint/no-shadow': 'error',
     '@typescript-eslint/ban-types': 'warn',
-    '@typescript-eslint/no-unused-vars': [ 
-        'error', 
-        { 
-            "args": "all", 
-            "argsIgnorePattern": "^_",
-            "ignoreRestSiblings": true,
-            "caughtErrors": "all"
-        } 
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        "args": "all",
+        "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true,
+        "caughtErrors": "all"
+      }
     ],
-    '@typescript-eslint/array-type': [ 'warn', { 'default': 'array' } ],
-    '@typescript-eslint/consistent-indexed-object-style': [ 'warn', 'record' ],
+    '@typescript-eslint/array-type': ['warn', { 'default': 'array' }],
+    '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-misused-promises': 'error',
     '@typescript-eslint/no-unnecessary-condition': 'warn',
@@ -170,13 +170,13 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'warn',
     '@typescript-eslint/strict-boolean-expressions': 'warn',
     '@typescript-eslint/no-inferrable-types': 'off',
-    '@typescript-eslint/member-delimiter-style': [ 'error' , {
-        "singleline": {
-            "delimiter": "comma",
-            "requireLast": false
-          },
+    '@typescript-eslint/member-delimiter-style': ['error', {
+      "singleline": {
+        "delimiter": "comma",
+        "requireLast": false
+      },
     }],
-    '@typescript-eslint/naming-convention': [ 'error' , ...namingConventionsRules ],
+    '@typescript-eslint/naming-convention': ['error', ...namingConventionsRules],
     '@typescript-eslint/promise-function-async': 'error',
     'sonarjs/no-inverted-boolean-check': 'error',
     'sonarjs/no-identical-conditions': 'error',
@@ -204,62 +204,62 @@ module.exports = {
   },
   'overrides': [
     {
-        'files': [
-            "*.test.*", 
-            'src/__tests__/**/*.*',
-        ],
-        'env': {
-            'jest/globals': true,
-        },
-        'plugins': [
-            'jest',
-            'testing-library'
-        ],
-        'extends': [
-            'plugin:jest/recommended',
-            'plugin:jest/style',
-            'plugin:testing-library/react'
-        ],
-        'rules': {
-            'jest/no-mocks-import': 'off',
-            'jest/expect-expect': 'off',
-            'jest/valid-title': 'off',
-            'jest/no-conditional-expect': 'off',
-            'jest/no-disabled-tests': 'error',
-            'jest/no-commented-out-tests': 'error',
-            'jest/no-export': 'error',
-            'jest/prefer-equality-matcher': 'warn',
-            'jest/prefer-expect-resolves': 'warn',
-            'jest/prefer-to-contain': 'warn',
-            'jest/prefer-to-have-length': 'warn',
-            'jest/valid-expect': 'error',
-            'jest/valid-expect-in-promise': 'error',
-            'no-await-in-loop': 'off',
-            'testing-library/no-node-access': 'off',
-            'testing-library/render-result-naming-convention': 'off',
-        },
+      'files': [
+        "*.test.*",
+        'src/__tests__/**/*.*',
+      ],
+      'env': {
+        'jest/globals': true,
+      },
+      'plugins': [
+        'jest',
+        'testing-library'
+      ],
+      'extends': [
+        'plugin:jest/recommended',
+        'plugin:jest/style',
+        'plugin:testing-library/react'
+      ],
+      'rules': {
+        'jest/no-mocks-import': 'off',
+        'jest/expect-expect': 'off',
+        'jest/valid-title': 'off',
+        'jest/no-conditional-expect': 'off',
+        'jest/no-disabled-tests': 'error',
+        'jest/no-commented-out-tests': 'error',
+        'jest/no-export': 'error',
+        'jest/prefer-equality-matcher': 'warn',
+        'jest/prefer-expect-resolves': 'warn',
+        'jest/prefer-to-contain': 'warn',
+        'jest/prefer-to-have-length': 'warn',
+        'jest/valid-expect': 'error',
+        'jest/valid-expect-in-promise': 'error',
+        'no-await-in-loop': 'off',
+        'testing-library/no-node-access': 'off',
+        'testing-library/render-result-naming-convention': 'off',
+      },
     },
     {
-        'files': [ "*.test.*" ],
-        'rules': {
-          'no-restricted-imports': [ 'error', { 'patterns': [ ...restrictedImportPatterns, '__utils__/' ] } ]
-        }
+      'files': ["*.test.*"],
+      'rules': {
+        'no-restricted-imports': ['error', { 'patterns': [...restrictedImportPatterns, '__utils__/'] }]
+      }
     },
     {
-      'files': [ 'src/__tests__/**/*.*', ],
+      'files': ['src/__tests__/**/*.*',],
       'rules': {
         'jest/no-standalone-expect': 'off',
       }
     },
     {
-        'files': [ '*.tsx*' ],
-        'rules': {
-            '@typescript-eslint/naming-convention': [ 'error' , 
-                ...(namingConventionsRules.map(convention => convention.selector === 'variable' ? 
-                {...convention, format: [ ...convention.format, 'PascalCase' ]} :
-                convention))
-            ]
-        }
+      'files': ['*.tsx*'],
+      'rules': {
+        '@typescript-eslint/naming-convention': ['error',
+          ...(namingConventionsRules.map(convention => convention.selector === 'variable' ?
+            { ...convention, format: [...convention.format, 'PascalCase'] } :
+            convention))
+        ]
+      }
     }
   ]
 };
