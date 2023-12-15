@@ -5,6 +5,6 @@ import { testPoll } from './model/Poll';
 
 test('renders home page stuff', () => {
   createPoll({ ...testPoll, ID: "best-fruit" });
-  const { getByText, container } = render(<App />);
+  const { container } = render(<App />);
   expect(container).toMatchSnapshot();
 });

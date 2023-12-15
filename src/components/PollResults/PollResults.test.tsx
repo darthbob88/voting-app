@@ -11,17 +11,17 @@ beforeEach(() => {
 })
 
 test('renders PollResults component', () => {
-    const { getByText, container } = render(<PollResults pollID={testPoll.ID} />);
+    const { container } = render(<PollResults pollID={testPoll.ID} />);
     expect(container).toMatchSnapshot();
 });
 
 xtest('user can cast ballot with proper result', () => {
-    const { getByText, container } = render(<PollResults pollID={testPoll.ID} />);
+    const { container } = render(<PollResults pollID={testPoll.ID} />);
     expect(container).toMatchSnapshot();
 });
 
 xtest('user cannot submit empty ballot', () => {
-    const { getByText, container } = render(<PollResults pollID={testPoll.ID} />);
+    const { container } = render(<PollResults pollID={testPoll.ID} />);
     expect(container).toMatchSnapshot();
 });
 
