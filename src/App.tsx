@@ -6,6 +6,8 @@ import PollListing from './components/PollListing/PollListing';
 import PollResults from './components/PollResults/PollResults';
 
 function App() {
+
+  // TODO: Fix this before actually deploying it.
   localStorage.setItem("best-fruit", JSON.stringify({
     "ID": "best-fruit",
     "name": "pollName",
