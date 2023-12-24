@@ -10,7 +10,7 @@ function App() {
   // TODO: Fix this before actually deploying it.
   localStorage.setItem("best-fruit", JSON.stringify({
     "ID": "best-fruit",
-    "name": "pollName",
+    "name": "Best Fruit",
     "creator": "darthbob88@gmail.com",
     "creation": 1668465233437,
     "expiration": 1668551633437,
@@ -66,6 +66,21 @@ function App() {
       }
     ]
   }));
+  localStorage.setItem("best-pet", JSON.stringify({
+    "ID": "best-pet",
+    "name": "Best Pet",
+    "creator": "darthbob88@gmail.com",
+    "creation": 1703207900702,
+    "expiration": 1703294300702,
+    "method": "IRV",
+    "candidates": [
+      "dog",
+      "cat",
+      "goldfish",
+      "hamster"
+    ],
+    "ballots": []
+  }))
 
   return (
     <div className="App">
