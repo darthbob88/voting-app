@@ -87,8 +87,8 @@ function App() {
       <header className="App-header">
         <PollListing />
         <NewPoll />
-        <CastBallot pollID='best-fruit' />
-        <PollResults pollID='best-fruit' />
+        <CastBallot pollID='best-pet' />
+        <PollResults pollID='best-pet' />
       </header>
     </div>
   );

@@ -11,7 +11,7 @@ function CastBallot({ pollID }: BallotProps) {
     // But how do I type this for, say, IRV, where it needs a list of how each
     // candidate is ranked?
     // TODO: Work out how to type this.
-    const [selectedOption, setSelectedOption] = useState<string>();
+    const [selectedOption, setSelectedOption] = useState<string[]>([]);
 
     const poll = retrievePoll(pollID);
     if (null == poll) {
@@ -21,20 +21,32 @@ function CastBallot({ pollID }: BallotProps) {
 
     const renderBallot = (options: string[], method: string) => {
         if (method === "FPTP") {
-            return <div className={styles.ballot}>
-                {options.map(option => <label key={option}> <input
-
-                    type="radio"
-                    name="ballot"
-                    value={option}
-                    onChange={() => setSelectedOption(option)}
-                    checked={selectedOption === option} />{option}</label>)}
-            </div>
-        } else if (method === "IRV") {
-            return <div className={styles.ballot}> A series of dropdown menus to select the first/second/third/etc candidates</div>
-        } else {
-            return null;
-        }
+            // return <div className={styles.ballot}>
+            //     {options.map(option => <label key={option}> <input
+            //         type="radio"
+            //         name="ballot"
+            //         value={option}
+            //         onChange={() => setSelectedOption(option)}
+            //         checked={selectedOption === option} />{option}</label>)}
+            // </div>
+        } else
+            if (method === "IRV") {
+                // TODO: It'd be real cool if this could be drag'n'drop.
+                return (<div className={styles.ballot}>
+                    {options.map((item, index) => <div className='singleOption' key={index}>
+                        <label>Your choice for option {index + 1}
+                            <select value={selectedOption[index]} onChange={(evt) => setSelectedOption(prevSelected => {
+                                var newArray = [...prevSelected]; newArray[index] = evt.target.value; return newArray;
+                            })}>
+                                <option selected disabled>Please select a candidate</option>
+                                {options.map(candidate => <option key={candidate} value={candidate}>{candidate}</option>)}
+                            </select>
+                        </label>
+                    </div>)}
+                </div>);
+            } else {
+                return null;
+            }
     }
 
     // TODO: This should redirect the user back to the home/poll page, and give some indication that we've cast a ballot.
