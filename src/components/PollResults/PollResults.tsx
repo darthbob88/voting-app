@@ -21,7 +21,7 @@ function PollResults({ pollID }: BallotProps) {
             ballots.reduce((acc, cur) => {
                 const choice = cur.votes as string;
                 if (!options.includes( choice))
-                    throw new Error(`Invalid ballot: ${choice} is not a valid option`);
+                    throw new Error(`Invalid ballot ID ${cur.ballotID}: ${choice} is not a valid option`);
                     
                 const currVal = acc.get(choice) ?? 0;
                 acc.set(choice, currVal + 1);
