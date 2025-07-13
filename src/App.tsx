@@ -79,7 +79,11 @@ function App() {
       "goldfish",
       "hamster"
     ],
-    "ballots": []
+    "ballots": [
+      { "ballotID": "butts", "voterID": "butts", "votes": ["dog", "cat", "goldfish"], "timestamp": 1752441637623, "pollID": "best-pet" },
+      { "ballotID": "butts", "voterID": "butts", "votes": ["cat", "dog", "goldfish"], "timestamp": 1752441672275, "pollID": "best-pet" },
+      { "ballotID": "butts", "voterID": "butts", "votes": ["hamster","dog", "cat", "goldfish"], "timestamp": 1752441637623, "pollID": "best-pet" },
+      { "ballotID": "butts", "voterID": "butts", "votes": ["goldfish", "hamster", "dog"], "timestamp": 1752441678808, "pollID": "best-pet" }]
   }))
 
   return (
