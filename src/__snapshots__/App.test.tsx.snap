@@ -249,7 +249,30 @@ exports[`renders home page stuff 1`] = `
         <div
           class="ballot"
         >
-           A series of dropdown menus to select the first/second/third/etc candidates
+          <p>
+            Winner: 
+            dog
+          </p>
+          <div>
+            Ballots:
+            <ul>
+              <li>
+                {"ballotID":"butts","voterID":"butts","votes":["dog","cat","goldfish"],"timestamp":1752441637623,"pollID":"best-pet"}
+              </li>
+              <li>
+                {"ballotID":"butts","voterID":"butts","votes":["dog","cat","goldfish"],"timestamp":1752441637623,"pollID":"best-pet"}
+              </li>
+              <li>
+                {"ballotID":"butts","voterID":"butts","votes":["cat","dog","hamster","goldfish"],"timestamp":1752441672275,"pollID":"best-pet"}
+              </li>
+              <li>
+                {"ballotID":"butts","voterID":"butts","votes":["hamster","dog","goldfish","cat"],"timestamp":1752441637623,"pollID":"best-pet"}
+              </li>
+              <li>
+                {"ballotID":"butts","voterID":"butts","votes":["goldfish","hamster","dog"],"timestamp":1752441678808,"pollID":"best-pet"}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
