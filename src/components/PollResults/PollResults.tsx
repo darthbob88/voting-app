@@ -51,26 +51,34 @@ function PollResults({ pollID }: BallotProps) {
             }
 
             Possibility to consider: If we drop candidate D and apply their ballot to candidate C, what happens if somebody voted [C, D]?
+            Need to fix selection for least-supported vote, so we don't drop the candidate with the most second-place votes.
+            Could use a scoring system; 5pts for 1st candidate, 4/3/2 for 2/3/4th candidate, and 1pt afterwards.
             */
             const threshold = ballots.length / 2;
             const result = new Map<string, Ballot[]>();
             const droppedCandidates = new Set<string>();
+            const score: { [key: string]: number } = {};
 
             ballots.forEach(singleBallot => {
-                const firstChoice = singleBallot.votes[0];
+                const firstChoice = singleBallot.votes[0] as string;
                 // if (!result.has(firstChoice)) throw new Error(`Invalid ballot ID ${singleBallot.ballotID}: ${firstChoice} is not a valid option`);
                 const firstChoiceBallots = result.get(firstChoice) ?? [];
                 result.set(firstChoice, [...firstChoiceBallots, singleBallot]);
+
+                let curScore = score[firstChoice] ?? 0;
+                score[firstChoice] = curScore + 5;
+
+                const secondChoice = singleBallot.votes[1];
+                curScore = score[secondChoice] ?? 0;
+                score[secondChoice] = curScore + 3;
             });
-            console.log("After first pass:");
-            console.table(result);
 
             let curLeader = options[0];
             let curLeaderLength = (result.get(curLeader) ?? []).length;
             let curLoser = curLeader;
             let curLoserLength = curLeaderLength;
             for (const [key, val] of result.entries()) {
-                if (val.length < curLoserLength) {
+                if (val.length <= curLoserLength && score[key] < score[curLoser]) {
                     curLoser = key;
                     curLoserLength = val.length;
                 }
@@ -82,7 +90,6 @@ function PollResults({ pollID }: BallotProps) {
 
             while (curLeaderLength < threshold) {
                 // Drop the current loser and transfer their ballots.
-                console.log(`No winner yet, dropping ${curLoser}`);
                 droppedCandidates.add(curLoser);
                 const transferredBallots = result.get(curLoser) ?? [];
                 for (const singleBallot of transferredBallots) {
@@ -94,8 +101,10 @@ function PollResults({ pollID }: BallotProps) {
 
                 result.delete(curLoser);
                 curLoserLength = threshold;
+                curLoser = curLeader;
+
                 for (const [key, val] of result.entries()) {
-                    if (val.length <= curLoserLength) {
+                    if (val.length <= curLoserLength && score[key] < score[curLoser]) {
                         curLoser = key;
                         curLoserLength = val.length;
                     }
@@ -105,13 +114,11 @@ function PollResults({ pollID }: BallotProps) {
                     }
                 }
 
-                console.log(`Current leader: ${curLeader}; current loser: ${curLoser}`);
-                console.table(result);
             }
 
 
             return <div className={styles.ballot}>
-            <p>Winner: {curLeader}</p>
+                <p>Winner: {curLeader}</p>
                 <div>Ballots:
                     <ul>
                         {ballots.map(singleBallot => (<li key={singleBallot.ballotID}>{JSON.stringify(singleBallot)}</li>))}
